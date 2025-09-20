@@ -53,28 +53,3 @@ Zeabur 每日有5美刀免费额度，部署 gcli2api 完全够用，可以放�
 ![部署中](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-6.png)
 
 部署成功后，即可访问您的专属域名，使用之前设置的密码登录，并上传您的 .json 凭证文件开始使用。
-
----
-
-## 可选：配置内存限制 (防止超额)
-
-如果您的服务繁忙，担心内存超限，可以在 Zeabur 的“变量”标签中添加以下环境变量来启用内存监控：
-
-*   `AUTO_START_MEMORY_MONITOR`: `true`
-*   `MAX_MEMORY_MB`: `450` (可根据需要调整)
-*   `MEMORY_CHECK_INTERVAL`: `10`
-
-> **注意**: 只有内存限制功能对服务器生效，若要重启，请将 `AUTO_START_MEMORY_MONITOR` 设为 `false` 并重启，成功后再改回 `true`。
-
-![内存限制](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-7.png)
-
-## 免费额度不够用？Zeabur付费服务购买教程
-
-如果免费的5美刀额度已用完，可以考虑购买Zeabur的付费服务器。对于大多数应用来说，最低配的 2c2g (2核CPU, 2GB内存) 规格就完全够用了。
-
-1.  **进入服务页面**：在 Zeabur 项目仪表盘中，找到需要升级的服务，点击进入服务详情页面。
-2.  **选购服务器**：在服务详情页面，找到服务器资源相关的选项，并选择“购买服务器”或类似的按钮。
-3.  **选择服务区域**：根据您的用户地理位置，选择一个合适的服务器区域以获得最佳访问速度。
-4.  **选择服务规格**：在规格选项页面，找到并选择 2c2g 规格。这是性价比较高的选择，足以满足大部分需求。确认后完成支付即可。
-
-![付费服务](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-8.png)
