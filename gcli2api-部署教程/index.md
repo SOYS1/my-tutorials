@@ -1,53 +1,80 @@
-# gcli2api 部署教程
+# gcli2api 云端部署自用教程
 
-本教程将指导您如何部署 `gcli2api` 项目。
+本教程将帮助您使用 Zeabur 平台一键免费部署 gcli2api 服务。服务需要几分钟，您可以带上已获取的 Gemini API 凭证文件（.json）供应自己使用。
 
-## 1. 环境准备
+> **注意**：获取凭证文件请参考[本地凭证获取教程](https://github.com/google/generative-ai-python/blob/main/docs/client_library_quickstart.ipynb)或[云端凭证获取教程](https://github.com/google/generative-ai-python/blob/main/docs/client_library_quickstart_colab.ipynb)。
 
-在开始之前，请确保您的系统已经安装了以下环境：
+## 通过Zeabur平台一键免费部署gcli2api服务
 
-*   [Node.js](https://nodejs.org/) (建议使用 LTS 版本)
-*   [pnpm](https://pnpm.io/installation)
+Zeabur 每日有5美刀免费额度，部署 gcli2api 完全够用，可以放心使用。
 
-## 2. 下载项目
+[**点击此处一键部署**](https://zeabur.com/button?template=https://github.com/SOYS1/gcli2api)
 
-将项目代码克隆到您的本地计算机：
+### 1. 切换为中文界面
 
-```bash
-git clone https://github.com/SOYS1/gcli2api.git
-cd gcli2api
-```
+如果您不熟悉英文，可以先将 Zeabur 的网站语言切换为中文，方便后续操作。
 
-## 3. 安装依赖
+![切换中文](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-1.png)
 
-在项目根目录中，使用 `pnpm` 安装所有必需的依赖项：
+### 2. 进行注册
 
-```bash
-pnpm install
-```
+点击一键部署后，如果您没有 Zeabur 账号，会自动跳转到注册页面。推荐使用 Google 账号进行注册，方便快捷。
 
-## 4. 项目配置
+![注册Zeabur](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-2.png)
 
-项目可能需要一些配置才能正常运行。通常会有一个 `.env.example` 或类似的示例配置文件。
+### 3. 手机验证
 
-1.  复制示例配置文件：
-    ```bash
-    cp .env.example .env
-    ```
-2.  编辑 `.env` 文件，并填入您自己的配置信息（例如 API 密钥、端口号等）。
+首次注册需要进行手机号验证以激活账号。
 
-## 5. 运行项目
+![手机验证](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-3.png)
 
-完成配置后，您可以通过以下命令启动项目：
+### 4. 确认并部署
 
-```bash
-pnpm start
-```
+登录后，系统会自动为您配置好项目，您只需点击“部署”按钮即可。
 
-## 6. 访问服务
+![确认部署](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-4.png)
 
-项目启动后，您应该可以在浏览器或通过 API 工具访问指定的服务地址，例如 `http://localhost:3000`。
+### 5. 设置服务参数
+
+在弹出的窗口中，您可以设置服务的名称、访问密码以及服务器区域。设置完成后，点击“部署”。
+
+*   **PASSWORD**: 这是您在访问 gcli2api 页面时需要填写的密码，请务必记住。
+*   **SERVICE DOMAIN**: 这是您的服务域名，可以自定义。
+*   **Region**: 服务区域，选择离您近的或者符合政策的区域即可。
+
+> **警告**: 请勿选择香港服务器，因为香港地区无法正常使用 Google Gemini 服务。
+
+![设置参数](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-5.png)
+
+### 6. 等待部署完成
+
+点击部署后，系统将开始自动化构建和部署。您可以点击“Go to Project”查看项目主页，等待服务状态变为绿色的“Running”。
+
+![部署中](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-6.png)
+
+部署成功后，即可访问您的专属域名，使用之前设置的密码登录，并上传您的 .json 凭证文件开始使用。
 
 ---
 
-*这是一个通用的部署模板，请根据 `gcli2api` 项目的实际情况进行修改和补充。*
+## 可选：配置内存限制 (防止超额)
+
+如果您的服务繁忙，担心内存超限，可以在 Zeabur 的“变量”标签中添加以下环境变量来启用内存监控：
+
+*   `AUTO_START_MEMORY_MONITOR`: `true`
+*   `MAX_MEMORY_MB`: `450` (可根据需要调整)
+*   `MEMORY_CHECK_INTERVAL`: `10`
+
+> **注意**: 只有内存限制功能对服务器生效，若要重启，请将 `AUTO_START_MEMORY_MONITOR` 设为 `false` 并重启，成功后再改回 `true`。
+
+![内存限制](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-7.png)
+
+## 免费额度不够用？Zeabur付费服务购买教程
+
+如果免费的5美刀额度已用完，可以考虑购买Zeabur的付费服务器。对于大多数应用来说，最低配的 2c2g (2核CPU, 2GB内存) 规格就完全够用了。
+
+1.  **进入服务页面**：在 Zeabur 项目仪表盘中，找到需要升级的服务，点击进入服务详情页面。
+2.  **选购服务器**：在服务详情页面，找到服务器资源相关的选项，并选择“购买服务器”或类似的按钮。
+3.  **选择服务区域**：根据您的用户地理位置，选择一个合适的服务器区域以获得最佳访问速度。
+4.  **选择服务规格**：在规格选项页面，找到并选择 2c2g 规格。这是性价比较高的选择，足以满足大部分需求。确认后完成支付即可。
+
+![付费服务](https://raw.githubusercontent.com/SOYS1/my-tutorials/main/images/gcli2api-部署教程-8.png)
