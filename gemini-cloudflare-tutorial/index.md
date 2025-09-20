@@ -8,14 +8,14 @@
 2.  在左侧导航栏中，找到并点击 **AI**。
 3.  在 AI 菜单下，选择 **AI Gateway**。
 
-    ![步骤一：导航到 AI Gateway](images/image1.png)
+    ![步骤一：导航到 AI Gateway](./images/image1.png)
 
 4.  点击 **创建网关**。
 5.  在 **Gateway 名称** 字段中，输入一个您自定义的名称（例如：`gpt-load`）。
 6.  根据您的需求配置其他设置，例如“收集日志”。对于初次设置，可以暂时保持默认值。
 7.  点击 **创建** 按钮。
 
-    ![步骤二：创建新网关](images/image2.png)
+    ![步骤二：创建新网关](./images/image2.png)
 
 ## 步骤二：获取 API 终结点
 
@@ -23,7 +23,7 @@
 2.  这个 URL 是您连接到 AI Gateway 的入口。请复制此 URL，稍后会用到。
 3.  平台选择 `Google AI Studio` 可以看到相应的 `curl` 测试示例。
 
-    ![步骤三：获取 API 终结点](images/image3.png)
+    ![步骤三：获取 API 终结点](./images/image3.png)
 
 ## 步骤三：在您的应用中配置上游
 
@@ -37,7 +37,7 @@
     *   **上游地址**: 粘贴您在 **步骤二** 中复制的 Cloudflare AI Gateway API 终结点 URL。
 4.  保存配置。
 
-    ![步骤四：配置上游地址](images/image4.png)
+    ![步骤四：配置上游地址](./images/image4.png)
 
 完成以上步骤后，您的应用程序发往此分组的请求将通过 Cloudflare AI Gateway 路由到 Google Gemini。您可以在 Cloudflare 的 AI Gateway 仪表盘中查看日志、分析和缓存等信息。
 
