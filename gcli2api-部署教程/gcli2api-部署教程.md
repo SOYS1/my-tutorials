@@ -1,8 +1,5 @@
 # gcli2api 云端部署自用教程
 
-> 本教程参考自 [星星人民公社](https://www.nodeseek.com/post-133985-1)，并由 [SOYS1](https://github.com/SOYS1) 整理。
-> 项目原地址：[su-k-a/gcli2api](https://github.com/su-k-a/gcli2api)
-
 ## 教程概述
 本教程将教您如何使用 Zeabur 平台一键免费部署 gcli2api 服务。部署完成后，您就可以将已获取的 Gemini API 凭证文件（.json）供自己使用。
 
@@ -14,30 +11,31 @@
 
 ### 1. 切换为中文界面 (可选)
 如果您不熟悉英文，可以先将 Zeabur 的网站语言切换为中文，方便后续操作。
+![Zeabur 登录页面](../images/gcli2api-部署教程-1.png)
 
 ### 2. 进行注册
 访问 [zeabur.com](https://zeabur.com) 并使用 GitHub 或 Google 账号注册。
-![Zeabur 登录页面](../images/gcli2api-部署教程-1.png)
+![Zeabur 登录页面](../images/gcli2api-部署教程-2.png)
 
 ### 3. 手机验证
 首次注册可能需要进行手机号验证以激活账号。
+![Zeabur 服务配置](../images/gcli2api-部署教程-3.png)
 
 ### 4. 一键部署
 登录后，点击下方按钮一键部署项目：
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/gcli2api)
 
-### 5. 设置服务参数
+### 5. 等待部署完成
+点击“部署”后，系统将开始自动构建和部署。
+![Zeabur 部署中](../images/gcli2api-部署教程-4.png)
+
+### 6. 设置服务参数
 在弹出的窗口中，设置以下参数：
 - **PASSWORD**: 设置访问 gcli2api 页面的密码，请务必牢记。
 - **SERVICE_DOMAIN**: 设置您的服务域名，可以自定义。
 - **Region**: 服务区域。
   > **警告**: 请不要选择香港或美国东部服务器，因为这些地区无法正常使用 Google Gemini 服务。
-
-![Zeabur 服务配置](../images/gcli2api-部署教程-3.png)
-
-### 6. 等待部署完成
-点击“部署”后，系统将开始自动构建和部署。您可以点击 "Go to Project" 查看项目主页，等待服务状态变为绿色的 "Running"。
-![Zeabur 部署中](../images/gcli2api-部署教程-4.png)
+![Zeabur 添加环境变量](../images/gcli2api-部署教程-5.png)
 
 ### 7. 添加凭证环境变量
 - 在 Zeabur 的服务设置中，找到“变量”选项卡。
@@ -45,7 +43,7 @@
 - 将您获取到的凭证文件（JSON 格式）的**全部内容**粘贴到值中。
 - 保存后，服务会自动重新部署。
 
-![Zeabur 添加环境变量](../images/gcli2api-部署教程-5.png)
+
 
 ### 8. 可选：配置内存限制 (防止超额)
 如果您的服务经常因内存超限而重启，可以在“变量”中添加以下环境变量来启用内存监控：
