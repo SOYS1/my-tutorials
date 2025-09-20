@@ -1,6 +1,4 @@
-# Gemini 上游配置教学 (Cloudflare AI Gateway)
-
-本教学将指导您如何通过 Cloudflare AI Gateway 配置 Gemini 上游，以便在您的应用程序中使用。
+# Gemini 上游配置教学
 
 ## 步骤一：访问并创建 AI Gateway
 
