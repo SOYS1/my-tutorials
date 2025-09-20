@@ -5,3 +5,4 @@
 ## 教学目录
 
 *   [Gemini 上游配置教学 (Cloudflare AI Gateway)](./gemini-cloudflare-tutorial/index.md)
+*   [gcli2api 部署教程](./gcli2api-部署教程/index.md)
